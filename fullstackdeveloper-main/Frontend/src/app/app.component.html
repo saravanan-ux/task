@@ -1,0 +1,55 @@
+<!-- Conditionally show the navbar -->
+<nav class="navbar navbar-expand-lg navbar-secondary bg-light" *ngIf="showNavbar">
+    <div class="container-fluid">
+        <!-- Logo and Company Name -->
+        <img class="ms-2" src="assets/Images/logo.png" id="logo" alt="Company Logo">
+        <img class="ms-2" src="assets/Images/skyname.jpeg" id="company-name" alt="SkyLena Name Logo">
+
+        <!-- Navbar toggler for smaller screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link home-link" routerLink="/" routerLinkActive="active" aria-current="page">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" routerLink="/ser1" routerLinkActive="active">Cloud Infrastructure & Implementation</a></li>
+                        <li><a class="dropdown-item" routerLink="/ser2" routerLinkActive="active">Cloud-Native Application Development</a></li>
+                        <li><a class="dropdown-item" routerLink="/ser3" routerLinkActive="active">Cloud Security Configuration</a></li>
+                        <li><a class="dropdown-item" routerLink="/ser4" routerLinkActive="active">Managed Services & Customer Experience</a></li>
+                        <li><a class="dropdown-item" routerLink="/ser5" routerLinkActive="active">Internship Program</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/achivements" routerLinkActive="active">Achievements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/courses" routerLinkActive="active">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/about" routerLinkActive="active">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/create" routerLinkActive="active">Register</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- This outlet will load the selected component -->
+<router-outlet></router-outlet>

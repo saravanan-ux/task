@@ -1,0 +1,257 @@
+/*  second Section  */
+
+
+/* background: url("/assets/images/1000236306.png"); */
+
+#bg-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #4CAF50;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    animation: float 3s infinite;
+}
+
+.coding-title {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #007BFF;
+    transform: rotateY(15deg) rotateX(5deg);
+    transition: transform 0.3s ease;
+}
+
+.coding-card {
+    perspective: 1000px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.coding-card .card-body {
+    transform: rotateY(15deg) rotateX(5deg);
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.5s ease;
+}
+
+.coding-card:hover .card-body {
+    transform: rotateY(0deg) rotateX(0deg);
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+h1 {
+    margin-top: 150px;
+}
+
+
+/* Logout button */
+
+.logout-btn {
+    position: absolute;
+    top: 75px;
+    right: 10px;
+    padding: 8px 15px;
+    background-color: #ef394b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+    /* Slightly darker red for hover effect */
+}
+
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+/* Modal dialog size - Increased width and padding */
+
+.modal-dialog {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    /* Increased padding */
+    width: 500px;
+    /* Increased width for larger box */
+    max-width: 90%;
+    /* Max width to avoid too large on small screens */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Removed lines and cross icon in the header */
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+    /* Removed padding bottom */
+    border-bottom: none;
+    /* Removed border */
+}
+
+
+/* Modal header title */
+
+.modal-header h5 {
+    margin: 0;
+    font-size: 20px;
+    /* Larger font size */
+    font-weight: bold;
+}
+
+
+/* Modal body styling */
+
+.modal-body {
+    padding: 20px 0;
+    /* Increased padding */
+    text-align: center;
+    font-size: 18px;
+    /* Larger font size for message */
+    color: #333;
+}
+
+
+/* Modal footer styling */
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    /* Increased padding */
+    border-top: none;
+    /* Removed border */
+}
+
+
+/* Button styling in the footer */
+
+.modal-footer button {
+    padding: 12px 20px;
+    /* Increased button padding */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    /* Larger font size */
+    transition: background-color 0.3s ease;
+}
+
+
+/* Secondary button */
+
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+
+/* Danger button (Logout) */
+
+.modal-footer .btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+/* Button hover effects */
+
+.modal-footer .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.modal-footer .btn-danger:hover {
+    background-color: #c82333;
+}
+
+
+/* Removed close button */
+
+.btn-close {
+    display: none;
+    /* Hidden the close button */
+}
+
+
+/* Metrics section */
+
+.metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.metric-card {
+    flex: 1;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 0 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.metric-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.metric-card h3,
+.metric-card p {
+    margin: 0;
+}
+
+a.metric-card {
+    text-decoration: none;
+    color: black;
+}
+
+a.metric-card:hover {
+    color: black;
+}

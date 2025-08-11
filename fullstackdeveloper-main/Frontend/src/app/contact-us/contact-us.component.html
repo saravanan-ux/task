@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div style="text-align:center">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="assets/Images/conta.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <!-- Bind the form to the submitForm() function with validation -->
+                <form (ngSubmit)="submitForm()" #contactForm="ngForm" novalidate>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" [(ngModel)]="skylena.firstname" placeholder="Your name.." required #fname="ngModel">
+
+                    <div *ngIf="fname.invalid && (fname.dirty || fname.touched)" class="text-danger">
+                        <!-- First Name is required. -->
+                    </div>
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" [(ngModel)]="skylena.lastname" placeholder="Your last name.." required #lname="ngModel">
+
+                    <div *ngIf="lname.invalid && (lname.dirty || lname.touched)" class="text-danger">
+                        <!-- Last Name is required. -->
+                    </div>
+
+                    <label for="country">Country</label>
+                    <select id="country" name="country" [(ngModel)]="skylena.country" required #country="ngModel">
+                        <option value="" disabled selected>--Select Option--</option>
+                        <option value="India">India</option>
+                        <option value="Dubai">Dubai</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Canada">Canada</option>
+                        <option value="USA">USA</option>
+                    </select>
+                    <div *ngIf="country.invalid && (country.dirty || country.touched)" class="text-danger">
+                        <!-- Please select a country. -->
+                    </div>
+
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" [(ngModel)]="skylena.subject" placeholder="Write something.." required style="height:170px" #subject="ngModel"></textarea>
+                    <div *ngIf="subject.invalid && (subject.dirty || subject.touched)" class="text-danger">
+                        <!-- Subject is required. -->
+                    </div>
+
+                    <!-- Submit button disabled until form is valid -->
+                    <button class="btn btn-success mt-3" type="submit" [disabled]="contactForm.invalid">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="contact-info mt-4">
+            <h5>Contact Details</h5>
+            <p><i class="fas fa-map-marker-alt"></i> 20-25, Sri Jeyam Plaza (TSJ), Shop No: 6, 2nd Floor, Dr. Radhakrishnan Road, 7th Street Extension, Gandhipuram, Coimbatore - 641 012, Tamil Nadu, INDIA.</p>
+            <p>
+                <i class="fas fa-envelope"></i><b> Email:</b>
+                <a href="mailto:skylenainfotechmd@gmail.com?subject=Contact&body=Hello, I would like to get in touch.">skylenainfotechmd@gmail.com</a> ,
+                <a href="mailto:⁠skylenainfotech@gmail.com?subject=Contact&body=Hello, I would like to get in touch.">⁠skylenainfotech@gmail.com</a>
+            </p>
+
+            <p><i class="fas fa-globe"></i><b> Website:</b> <a href="http://www.skylenainfotech.com" target="_blank">www.skylenainfotech.com</a></p>
+
+            <p>
+                <i class="fas fa-phone"></i> <span class="phone-numbers"><b>Contact: </b>
+                <a href="tel:+916369170669">+91 63691 70669</a>,
+                <a href="tel:+917795203926">+91 77952 03926</a>,
+                <a href="tel:+918870484604">+91 88704 84604</a>,
+                <a href="tel:+919945203749">+91 99452 03749</a>
+            </span>
+
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
